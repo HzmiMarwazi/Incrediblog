@@ -1,0 +1,331 @@
+/* IMPORTING GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Gochi+Hand&family=Tagesschrift&display=swap');
+
+/* GENERAL RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #733D3A, #500F0B);
+    background-attachment: fixed;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #990000;
+    text-align: center;
+    padding: 15px 0 10px 0;
+}
+
+.logo-text {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #f7b500;
+    text-transform: uppercase;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+/* Updated Navigation Bar to be Sticky on top when scrolling */
+.nav-bar {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #b30000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    position: sticky;        /* Make sticky */
+    top: 0;                  /* Pins it to the exact top edge of viewport */
+    z-index: 1000;           /* Guarantees it floats over images and background layers while scrolling */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar-logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    object-fit: contain;
+}
+
+.nav-links a {
+    color: #f7b500;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.search-and-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 2px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 4px;
+    width: 150px;
+    color: #000;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.social-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* UNIFIED ONE BOX ELEMENT WRAPPER */
+.single-unified-box {
+    background: linear-gradient(135deg, #733D3A, #500F0B);
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f5e6e6; 
+    font-family: 'Tagesschrift', display;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 30px auto; /* Changed top margin to 0 to remove the gap completely */
+}
+
+/* INNER LAYOUT CARDS RESET */
+.intro-section {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.main-profile-heading {
+    font-size: 2.5rem; 
+    margin-bottom: 25px;
+    color: #F9D02F; 
+    font-weight: normal;
+    font-family: 'DM Serif Text', serif; 
+}
+
+.hero-image-container {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 440px;
+    object-fit: cover;
+}
+
+.intro-text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 850px;
+    margin: 0 auto 30px auto;
+    color: #f5e6e6; 
+    font-family: 'Tagesschrift', display;
+}
+
+.intro-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.side-by-side-img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* SEPARATOR BETWEEN SEGMENTS */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.25), transparent);
+    margin: 40px 0;
+}
+
+/* BLOG LAYOUT STRUCTURE INSIDE THE SINGLE BOX */
+.blog-post {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    background: transparent;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.post-title {
+    font-size: 2.1rem; 
+    color: #F9D02F; 
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-family: 'DM Serif Text', serif; 
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: #dfb3b1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.post-content p {
+    line-height: 1.72;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #f5e6e6; 
+    font-family: 'Tagesschrift', display;
+}
+
+/* TARGETS SELECT LIST SECTIONS AND BOLD CALLOUTS */
+.mission-list, 
+.post-content p strong,
+.post-content strong {
+    font-family: 'Tagesschrift', display; 
+}
+
+.mission-list {
+    margin: 15px 0 20px 25px;
+    line-height: 1.6;
+    color: #f5e6e6; 
+}
+
+/* STYLE FOR COOKIES PARAGRAPH BLOCK */
+.cookies-text {
+    font-family: 'Tagesschrift', display;
+    line-height: 1.72;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #f5e6e6;
+}
+
+/* SIDEBAR STRUCTURE */
+.post-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 20px;
+}
+
+/* NO BOTTOM GAP CONTAINER FOR DECOR2 Banner */
+.mini-header-badge {
+    margin-bottom: 0; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* NO BOTTOM GAP STYLING FOR DECOR2 IMAGE */
+.sidebar-badge-img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    object-fit: contain;
+    display: block; 
+    margin: 0 auto;
+}
+
+.sidebar-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.media-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.rounded-img {
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* DECORATIVE ENLARGED STAR CARDS (4REM) */
+.star-card-container {
+    position: relative;
+    display: inline-block;
+}
+
+.star-decor {
+    position: absolute;
+    font-size: 4rem; 
+    z-index: 10;
+    pointer-events: none;
+    line-height: 1;
+}
+
+.red-star-left { color: #A60E0E; top: -30px; left: -25px; }
+.yellow-star-right { color: #f4b400; top: -30px; right: -25px; }
+.yellow-star-left { color: #f4b400; top: -30px; left: -25px; }
+.red-star-right-bottom { color: #A60E0E; bottom: -20px; right: -25px; }
+
+/* RESPONSIVE LAYOUT FOR MOBILE VIEW */
+@media (max-width: 768px) {
+    .blog-post {
+        grid-template-columns: 1fr;
+    }
+    .post-sidebar {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 25px;
+    }
+    .content-block, .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-bar-logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE INCREDIBLOG - All-In-One Edition</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Langar&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/Astyle.css">
+
+    <style>
+        .site-brand-title,
+        .navbar-menu a {
+            color: #FFBF35 !important;
+        }
+
+        /* Standard layer setup for img backgrounds */
+        .site-inner-canvas,
+        .page-scroll-section {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* --- BACKGROUND MANAGEMENT FOR HAIR SECTOR --- */
+        #hair {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* The background image wrapper is now placed precisely around the haircut options */
+        .hair-grid-bg-wrapper {
+            position: relative;
+            width: 100%;
+            z-index: 1;
+            box-sizing: border-box;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        /* Keeps the image contained purely to the grid and text sections */
+        .hair-background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Explicit layer styling for content within the wrapped background section */
+        .hair-custom-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="site-outer-frame">
+        <div class="site-inner-canvas">
+
+            <div class="brand-title-container">
+                <div class="site-brand-title">THE INCREDIBLOG</div>
+            </div>
+            
+            <header class="sticky-nav-bar">
+                <div class="navigation-row">
+                    
+                    <div class="nav-left-group">
+                        <div class="logo-circle-container">
+                            <div class="dark-image-placeholder text-logo">
+                                <a href="index.html"><img src="img/logo.png" alt="Dash Logo"></a> 
+                            </div>
+                        </div>
+                        <nav class="navbar-menu">
+                            <a href="Mr.Incredible.html">Mr Incredible</a>
+                            <a href="elastigirl.html">Elastigirl</a>
+                            <a href="violet.html">Violet</a>
+                            <a href="Dash.html">Dash</a>
+                            <a href="JackJack.html">Jack-Jack</a>
+                        </nav>
+                    </div>
+
+                    <div class="header-utilities">
+                        <div class="search-box-wrapper">
+                            <input type="text" placeholder="Search...">
+                            <span class="search-icon">🔍</span>
+                        </div>
+                        
+                        <div class="social-icon-links">
+                            <div class="social-img-wrapper">
+                                <img src="img/facebook.png" alt="Facebook">
+                            </div>
+                            <div class="social-img-wrapper">
+                                <img src="img/tiktoklogo.png" alt="TikTok">
+                            </div>
+                            <div class="social-img-wrapper">
+                                <img src="img/ig.webp" alt="Instagram">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+
+            <div id="home" class="page-scroll-section">
+                <section class="comic-hero-banner">
+                    <img src="img/background1.jpg" alt="Comic Background" class="banner-bg-image">
+
+                    <div class="banner-frame side-panel-frame">
+                        <div class="dark-image-placeholder text-logo">
+                            <img src="img/gambar1.jpg" alt="Banner 1">
+                        </div>
+                    </div>
+                    <div class="banner-frame center-panel-frame">
+                        <div class="dark-image-placeholder text-logo">
+                            <img src="img/gambar2.jpg" alt="Banner 2">
+                        </div>
+                    </div>
+                    <div class="banner-frame side-panel-frame">
+                        <div class="dark-image-placeholder text-logo">
+                            <img src="img/gambar3.jpg" alt="Banner 3">
+                        </div>
+                    </div>
+                </section>
+
+                <main class="character-bio-section">
+                    <h1 class="character-title">Dashiel Parr</h1>
+                    
+                    <div class="profile-collage-matrix">
+                        <div class="comic-accent-star star-left-side">★</div>
+                        <div class="comic-accent-star star-right-side">★</div>
+
+                        <div class="collage-side-column">
+                            <div class="circle-profile-frame tl-offset">
+                                <div class="dark-image-placeholder text-logo">
+                                    <img src="img/dash1.jpg" alt="Dash Top Left">
+                                </div>
+                            </div>
+                            <div class="circle-profile-frame bl-offset">
+                                <div class="dark-image-placeholder text-logo">
+                                    <img src="img/dash2.jpg" alt="Dash Bottom Left">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stadium-oval-center-frame">
+                            <div class="dark-image-placeholder main-profile-fix text-logo">
+                                <img src="img/dash3.jpg" alt="Dash Main Center">
+                            </div>
+                        </div>
+
+                        <div class="collage-side-column">
+                            <div class="circle-profile-frame tr-offset">
+                                <div class="dark-image-placeholder text-logo">
+                                    <img src="img/dash4.jpg" alt="Dash Top Right">
+                                </div>
+                            </div>
+                            <div class="circle-profile-frame br-offset">
+                                <div class="dark-image-placeholder text-logo">
+                                    <img src="img/dash5.jpg" alt="Dash Bottom Right">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comic-diary-outer-card">
+                        <div class="diary-text-content">
+                            <p>Hey everyone!<br>
+                            I'm Dash Parr, and if there's one thing you should know about me, it's that I absolutely hate sitting still. Seriously, how do people do it? When you can run faster than almost anything, standing around feels like forever!</p>
+                            
+                            <p>I love adventures, exploring new places, and doing anything exciting. Sometimes I get curious about things I probably shouldn't mess with... but that's part of the fun, right?<br>
+                            The coolest thing about me is my super speed. I can run incredibly fast, and honestly, I'd love to use my powers all the time. Fighting bad guys, helping people, racing around the cityrun-sounds way more fun than pretending to be a normal kid.</p>
+                            
+                            <p>The only problem? Mom and Dad keep telling me that our powers have to stay a secret. I know they're just trying to keep us safe, but sometimes I wish everyone could see what I can do. It isn't easy being the fastest kid around and having to act like you're ordinary!</p>
+                            
+                            <p>Anyway, that's a little bit about me. Stick around if you want to hear more about my adventures, my family, and maybe a few pranks I definitely didn't pull...</p>
+                            
+                            <p class="diary-signature">— Dash</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <div class="grounded-title-block">
+                <h2>The Time I Almost Got Grounded</h2>
+            </div>
+
+            <section class="comic-hero-banner text-spacer">
+                <img src="img/background1.jpg" alt="Comic Background" class="banner-bg-image">
+
+                <div class="banner-frame side-panel-frame">
+                    <div class="dark-image-placeholder text-logo">
+                        <img src="img/picture1.png" alt="Grounded Banner 1">
+                    </div>
+                </div>
+                <div class="banner-frame center-panel-frame">
+                    <div class="dark-image-placeholder text-logo">
+                        <img src="img/picture2.gif" alt="Grounded Banner 2">
+                    </div>
+                </div>
+                <div class="banner-frame side-panel-frame">
+                    <div class="dark-image-placeholder text-logo">
+                        <img src="img/picture3.png" alt="Grounded Banner 3">
+                    </div>
+                </div>
+            </section>
+
+            <div id="prank" class="page-scroll-section">
+                <div class="page-section-divider">
+                    <span class="divider-star">★</span>
+                    <h2 class="divider-title">My Latest Pranks Hehe</h2>
+                    <span class="divider-star">★</span>
+                </div>
+
+                <section class="halftone-grid-container">
+                    <div class="pranks-grid">
+                        
+                        <div class="prank-card">
+                            <h3 class="card-title">1. thumbtack on my own teacher bernier kropp</h3>
+                            <div class="card-inner-box">
+                                <div class="dark-image-placeholder card-media text-logo">
+                                    <img src="img/dashiel1.png" alt="Dashiel Mr Kropp Prank">
+                                </div>
+                                <div class="card-text-body" style="font-size: small;">
+                                    <p>Dear Blog Friends,<br>Today was awesome.<br>Well, not for Mr. Kropp.<br>Somehow, I ended up in Principal Walker's office again. Mr. Kropp was super mad and kept saying I put a thumbtack on his chair.</p>
+                                    <p>He even brought a video!<br>He looked so confident, like he finally caught me doing something.<br>Then Principal Walker played the tape.<br>Guess what?</p>
+                                    <p>Nobody saw anything.<br>Mr. Kropp sat down, jumped up, started yelling, and that was it.<br>He kept saying, "It was Dash! It was Dash!"<br>But if nobody saw me do it... how can they prove it?</p>
+                                    <p>Exactly.<br>Principal Walker let me go, and Mr. Kropp got even angrier. I thought he was going to turn red.<br>Mom gave me that look afterward. You know, the one that means, "Dash, what did you do?"<br>I didn't say much.<br>Probably for the best.</p>
+                                    <p>Anyway, that's all for now.<br><strong>— Dash</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prank-card">
+                            <h3 class="card-title">2. teasing violet</h3>
+                            <div class="card-inner-box">
+                                <div class="dark-image-placeholder card-media text-logo">
+                                    <img src="img/dashiel2.png" alt="Dashiel Teasing Violet">
+                                </div>
+                                <div class="card-text-body" style="font-size: small;">
+                                    <p>Dear Blog Friends,<br>Tonight's dinner was pretty boring, so I remembered that Violet has a crush on this guy named Tony Rydinger.</p>
+                                    <p>And I know something funny.<br>Whenever she hears his name, her face automatically turns red. She starts blushing right away, and it's impossible not to notice.<br>So right in the middle of dinner, I casually mentioned his name.</p>
+                                    <p>"Tony."<br>"Dash, stop."<br>"Tony."</p>
+                                    <p>She got super embarrassed, but I kept bringing it up. The more I teased her, the redder she got. After a while she got really mad and started hitting me, and before we knew it we were fighting under and around the dinner table.<br>Honestly, that was way more exciting than dinner.<br>Then she used a force field.<br>WHAM.</p>
+                                    <p>I ran straight into it.<br>Mom and Dad stopped the fight, but for me it was still pretty fun.<br>Maybe if Violet doesn't want people mentioning Tony, she should stop blushing every time his name comes up.</p>
+                                    <p>— Dash ⚡</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prank-card">
+                            <h3 class="card-title">3. i snuck onto mom's plane</h3>
+                            <div class="card-inner-box">
+                                <div class="dark-image-placeholder card-media text-logo">
+                                    <img src="img/dashiel3.png" alt="Dashiel Sneaking onto Plane">
+                                </div>
+                                <div class="card-text-body" style="font-size: small;">
+                                    <p>Today was supposed to be a normal day.<br>Then I saw Mom packing bags and acting really suspicious.<br>She kept saying everything was fine, but I knew something was going on.<br>And then I saw it. My super suit. A brand new super suit made just for me.</p>
+                                    <p>There was no way I was staying home after that.<br>Mom told me to stay put, but if there's one thing everyone should know about me, it's that I hate being left out.<br>So I followed her.</p>
+                                    <p>Turns out Violet followed me too. Apparently she thought she could stop me. She couldn't. Before we knew it, we were both hiding on Mom's plane. When Mom find us, she was not happy. At all.<br>Then she find out we left Jack-Jack at home.<br>That definitely didn't make things better.</p>
+                                    <p>The whole time Mom kept telling us how dangerous everything was, but honestly, I was just excited. For once, something interesting was happening, and I finally got to wear my super suit.<br>Looking back, maybe sneaking onto the plane wasn't my best idea.<br>Especially when missiles started flying at us.</p>
+                                    <p>Missiles.<br>Still, if I had stayed home, I would've missed the biggest adventure of my life.<br>So was it worth it?<br>Definitely.</p>
+                                    <p>— Dash ⚡</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prank-card">
+                            <h3 class="card-title">4. why frozone never says no</h3>
+                            <div class="card-inner-box">
+                                <div class="dark-image-placeholder card-media text-logo">
+                                    <img src="img/dashiel4.jpg" alt="Dashiel Frozone Water Prank">
+                                </div>
+                                <div class="card-text-body" style="font-size: small;">
+                                    <p>Hellow Blog Friends,<br>One of the coolest things about having Frozone around is that he's always up for a little fun. Well... most of the time.<br>Today, I grabbed a glass of water and ran over to him.<br>He saw me coming and immediately knew what I was about to do.</p>
+                                    <p>"Dash, don't even think about it." Too late. I squirted water right at him.</p>
+                                    <p>FWOOSH.<br>A second later, the water turned into ice before it even hit the ground. Okay, that's actually pretty awesome every single time.</p>
+                                    <p>So I did it again.<br>And again. And maybe a few more times.<br>Eventually, Frozone gave me that look adults always give when they're trying really hard not to be annoyed.<br>You know the one.<br>The "I'm about five seconds away dari pada telling your mother" look.</p>
+                                    <p>I stopped.<br>For about ten seconds.<br>Then I started again.<br>Honestly, I think Frozone secretly enjoys it. If he didn't, he would've frozen my shoes to the floor by now.</p>
+                                    <p>Actually...<br>Maybe I shouldn't give him ideas.</p>
+                                    <p>— Dash ⚡</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prank-card">
+                            <h3 class="card-title">5. the biggest prank that went totally wrong</h3>
+                            <div class="card-inner-box">
+                                <div class="dark-image-placeholder card-media text-logo">
+                                    <img src="img/dash1.jpg" alt="Dashiel School Prank Gone Wrong">
+                                </div>
+                                <div class="card-text-body" style="font-size: small;">
+                                    <p>Hi Blog Friends,<br>Okay.<br>I need to write this down before I forget how fast everything went wrong. So I had this amazing idea today. Like, actually one of my best ideas ever. What if I could move so fast at school that nobody would even know what happened… and I could pull off the ultimate prank? Yeah. Sounds awesome, right? So I started small. Nothing obvious. Just moving a few things around, switching stuff, making little changes while everyone was distracted. At first, it was perfect.</p>
+                                    <p>Nobody saw anything. No one could prove anything. I was basically invisible. Then I got a bit carried away. Okay, a LOT carried away. Things started disappearing, reappearing, changing places… I was laughing so hard I almost tripped over my own speed. Then suddenly Everything stopped. Like, everything. People started noticing. Teachers were confused. Someone blamed someone else. Then everyone was looking around like something weird was happening And then I heard it.</p>
+                                    <p>“Dash…”<br>That tone. The Mom tone.<br>Yeah. I was caught.<br>Turns out, being fast doesn’t matter when everyone already knows it’s you. I had to stand there while everything got “undone” and I got the full lecture about using my powers responsibly again.</p>
+                                    <p>So yeah.<br>Best prank ever?<br>More like worst idea ever.<br>But… I still think it was kinda impressive.</p>
+                                    <p>— Dash ⚡</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prank-card">
+                            <h3 class="card-title">6. the neighbor garden situation</h3>
+                            <div class="card-inner-box">
+                                <div class="dark-image-placeholder card-media text-logo">
+                                    <img src="img/dashiel6.jpg" alt="Dashiel and Jack-Jack Neighbor Prank">
+                                </div>
+                                <div class="card-text-body" style="font-size: small;">
+                                    <p>Dear Blog Friends,<br>It started when Mom and Dad weren’t home.<br>The house was quiet. Too quiet. Violet was upstairs doing her “don’t bother me” thing, and I was downstairs trying to find something interesting to do. That’s when I noticed Jack-Jack staring at the window. At Mr. Johnson’s house next door. You know, the neighbor who always thinks our family is “a little strange.” Anyway.</p>
+                                    <p>So I decided to take him out just to look around the neighborhood.<br>That was the plan. Just look around. But then I saw Mr. Johnson’s garden. And I had an idea. A really good idea. So I brought Jack Jack a little closer. He was still staring at the garden like it was calling him or something. Then suddenly his eyes started doing that weird glow thing again. And before I even had time to think Boom. The garden went crazy. Not like exploding crazy. More like… everything started changing at once. Flowers bending in weird directions, garden gnomes looking confused, bushes moving like they were alive and trying to escape. It was actually kind of impressive. I didn’t even fix it right away. I just watched.</p>
+                                    <p>Because honestly… it was funny. Then Jack-Jack giggled like he was proud of it. That’s when I realized this was getting out of hand.<br>Too late. Mr. Johnson came outside. He stopped. Looked at his garden.<br>Looked at me. Looked at Jack-Jack. Everything was completely messed up and not normal at all. So I did what I always do. I ran. Fast. Like REALLY fast. I fixed parts of the garden while moving, moved Jack-Jack out of sight, straightened things, and tried to make it all look like nothing weird ever happened. When I finally stopped, I was standing there like a normal kid again. Mr. Johnson just stared for a long time. Then he slowly went back inside without saying anything. Which is honestly worse than yelling. Because now I think he’s just confused forever. Anyway.<br>Jack-Jack was smiling the whole time.<br>I think he liked it.<br>I think I did too.<br>That might be a problem.</p>
+                                    <p>— Dash ⚡</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+            <div id="speed" class="page-scroll-section">
+                <div class="speed-title-block">
+                    <h2>Fast enough to be anywhere</h2>
+                </div>
+
+                <section class="comic-hero-banner text-spacer">
+                    <img src="img/background1.jpg" alt="Comic Background" class="banner-bg-image">
+
+                    <div class="banner-frame side-panel-frame">
+                        <div class="dark-image-placeholder"><img src="img/budak1.jpg" alt="Speed Banner 1"></div>
+                    </div>
+                    <div class="banner-frame center-panel-frame">
+                        <div class="dark-image-placeholder"><img src="img/budak2.jpg" alt="Speed Banner 2"></div>
+                    </div>
+                    <div class="banner-frame side-panel-frame">
+                        <div class="dark-image-placeholder"><img src="img/budak3.gif" alt="Speed Banner 3"></div>
+                    </div>
+                </section>
+
+                <section class="speed-content-wrapper">
+                    <div class="speed-diary-card">
+                        <p class="speed-card-header">Dear Blog Friends,</p>
+                        <p>One of the best things about being super fast is that I never have to wait. Seriously. People spend hours planning trips, packing bags, and sitting on planes. Meanwhile, if I wanted to see a beach, I'd just run there. I'd probably start with Santa Monica Beach and race along the shoreline before anyone even noticed I was there. Plus, if someone dropped their ice cream, I could see it happen in slow motion. The kid would cry, the parents would panic, and I'd already be halfway down the beach before the first tear hit the sand. If I wanted to see a mountain, I'd run there too. Maybe I'd sprint up Yosemite's trails just to reach the top first. Everyone else would be taking photos of the view, but I'd probably be watching hikers argue about which trail they were supposed to take. One place I'd definitely visit is the Golden Gate Bridge. Not just to run across it.</p>
+                        <p>I'd want to stop at the highest part and look down at everything happening below. From up there, you can see all kinds of funny stuff. Someone rushing to work, someone chasing a runaway hat, a tourist taking fifty pictures of the exact same thing, or a kid dropping an ice cream and immediately bursting into tears. People are hilarious when they don't know anyone is watching. I'd also love running through New York City.</p>
+                        <p>There are always interesting things happening there. Street performers, people talking to themselves, taxis honking for no reason, and tourists staring ancients with maps while standing right in the middle of the sidewalk. I'd probably circle around them three times before they figured out where they were going. The Grand Canyon would be awesome too. Most people spend hours looking at it. I'd probably run from one viewpoint to another just to compare which side looked cooler. And of course, I'd visit Disney World. Not because of the rides. Because I'd finally get to see if the lines are actually as long as everyone says they are. Then I'd ride everything before most people moved forward one spot.</p>
+                        <p>I think I'd spend most of my time exploring places I've never seen before. Not because I have to go there. Just because I can. Sometimes I wonder how far I could get before dinner. Probably pretty far. The hardest part would be remembering where I started.</p>
+                        <p class="speed-card-footer">— Dash ⚡</p>
+                    </div>
+                </section>
+            </div>
+
+            <div id="hair" class="page-scroll-section">
+                
+                <div class="hair-title-block">
+                    <h2>RUNNING AT 100 MPH & BAD HAIR DAYS</h2>
+                </div>
+
+                <section class="comic-hero-banner text-spacer">
+                    <img src="img/background1.jpg" alt="Comic Background" class="banner-bg-image">
+
+                    <div class="banner-frame side-panel-frame">
+                        <div class="dark-image-placeholder"><img src="img/rambut1.jpg" alt="Hair Banner 1"></div>
+                    </div>
+                    <div class="banner-frame center-panel-frame">
+                        <div class="dark-image-placeholder"><img src="img/rambut2.jpg" alt="Hair Banner 2"></div>
+                    </div>
+                    <div class="banner-frame side-panel-frame">
+                        <div class="dark-image-placeholder"><img src="img/rambut3.jpg" alt="Hair Banner 3"></div>
+                    </div>
+                </section>
+
+                <div class="hair-grid-bg-wrapper">
+                    <img src="img/background5.jpg" alt="Hair Options Texture" class="hair-background-image">
+
+                    <main class="hair-custom-container">
+                        <div class="hair-custom-grid">
+                            
+                            <div class="square-box">
+                                <div class="dark-image-placeholder box-img-side">
+                                    <img src="img/kepala1.jpg" alt="Low Fade Haircut">
+                                </div>
+                                <div class="box-text-side">
+                                    <strong>⚡ low fade</strong><br><br>
+                                    This haircut looks fast.<br>
+                                    I don't know how else to explain it.<br>
+                                    Some haircuts look like they belong in school.<br>
+                                    This one looks like it belongs in a race.<br>
+                                    Or on a superhero.<br>
+                                    Or both.
+                                </div>
+                            </div>
+
+                            <div class="square-box">
+                                <div class="dark-image-placeholder box-img-side">
+                                    <img src="img/kepala2.jpg" alt="Textured Crop Haircut">
+                                </div>
+                                <div class="box-text-side">
+                                    <strong>textured crop</strong><br><br>
+                                    This one is my favorite.<br>
+                                    It's short.<br>
+                                    It's easy.<br>
+                                    And when it gets messy, people think I did it on purpose.<br>
+                                    That's called strategy:
+                                </div>
+                            </div>
+
+                            <div class="square-box">
+                                <div class="dark-image-placeholder box-img-side">
+                                    <img src="img/kepala3.jpg" alt="Messy Quiff Haircut">
+                                </div>
+                                <div class="box-text-side">
+                                    <strong>messy quiff</strong><br><br>
+                                    This haircut starts messy.<br>
+                                    Which means I literally can't ruin it.<br>
+                                    I could run around the entire city and come back looking exactly the same.<br>
+                                    That's impressive.
+                                </div>
+                            </div>
+
+                            <div class="square-box">
+                                <div class="dark-image-placeholder box-img-side">
+                                    <img src="img/kepala4.jpg" alt="Crew Cut Haircut">
+                                </div>
+                                <div class="box-text-side">
+                                    <strong>crew cuff</strong><br><br>
+                                    No styling.<br>
+                                    No fixing.<br>
+                                    No wasting time.<br>
+                                    Just wake up and go.<br>
+                                    The only problem?<br>
+                                    People might think I'm being responsible.<br>
+                                    Let's not get carried away.
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="rectangle-box">
+                            <p>
+                                I chose the Textured Crop because it still looks good even after running around all day. Any hairstyle would get messy at super speed anyway, so this haircut is practical and easy to manage. Plus, the messy look suits me. The Textured Crop is the perfect balance between looking good and keeping up with my fast-paced lifestyle.
+                            </p>
+                            <p class="dash-sig">
+                                — Dash ⚡
+                            </p>
+                        </div>
+                    </main>
+                </div> 
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

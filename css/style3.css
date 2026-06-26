@@ -1,0 +1,156 @@
+/* Styling Configurations */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eaeaea; /* Light grey outer background matching screen borders */
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* Document Container Wrapper scaled to match main project box sizing */
+.guide-container {
+    width: 90%;
+    max-width: 850px; /* Slightly narrower layout width optimized for clean text reading */
+    background-color: #d1d5db; /* Grey layout backdrop matching internal view */
+    padding: 50px 45px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    color: #222222;
+}
+
+/* Header Text Rules */
+.guide-header {
+    margin-bottom: 30px;
+}
+
+.main-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.45rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+.author-line {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Intro Paragraph Spacing Blocks */
+.intro-block {
+    margin-bottom: 35px;
+}
+
+.intro-block p, .tip-item p, .outro-text p {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Maintaining informal personal font choice */
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+/* Tips Container Items */
+.tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.tip-item h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+/* Specialized Custom Bullet Styling rules */
+.conversation-examples {
+    list-style-type: none;
+    padding-left: 15px;
+    margin-bottom: 12px;
+}
+
+.conversation-examples li {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 15px;
+}
+
+/* Subtle dash bullet selectors */
+.conversation-examples li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #222;
+}
+
+/* Closing Section Architecture */
+.guide-footer {
+    margin-top: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding-top: 25px;
+}
+
+.outro-text h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.guide-footer .signature {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 30px;
+    font-style: normal;
+}
+
+/* Container to push the button to the bottom-right corner */
+.back-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 850px; /* Aligns with the main text column constraint */
+    margin: 20px auto 0 auto;
+    padding: 0 20px;
+}
+
+/* Back Button Layout Styling */
+.back-navigation-btn {
+    background-color: #928193; /* Muted deep violet purple */
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover State Feedback */
+.back-navigation-btn:hover {
+    background-color: #766577;
+    transform: translateY(-1px);
+}
+
+/* Mobile Friendly Optimization scaling down padding spaces */
+@media (max-width: 600px) {
+    .guide-container {
+        width: 95%;
+        padding: 30px 20px;
+    }
+}

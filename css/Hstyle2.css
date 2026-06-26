@@ -1,0 +1,350 @@
+/* --- Base Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+body {
+    background-color: #2b1f1f; 
+    color: #e6dfd3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #990000;
+    text-align: center;
+    padding: 15px 0 10px 0;
+}
+
+.logo-text {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #f7b500;
+    text-transform: uppercase;
+}
+
+/* Navigation Bar is Sticky on top when scrolling */
+.nav-bar {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #b30000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    position: sticky;        
+    top: 0;                  
+    z-index: 1000;          
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar-logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    object-fit: contain;
+}
+
+.nav-links a {
+    color: #f7b500;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.search-and-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 2px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 4px;
+    width: 150px;
+    color: #000;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.social-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* --- Main Layout Container Wrapper --- */
+.blog-container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+/* --- Unified Section Background Layout System --- */
+.section-wrapper {
+    width: 100%;
+    padding: 50px 40px;
+    position: relative;     /* Creates standard bounding container layout */
+    overflow: hidden;       /* Keeps child background image contained */
+}
+
+.bg-custom-style {
+    background-color: #4a1414; /* Fallback solid color */
+}
+
+/* New Standard inline HTML Img Layer Configurations */
+.section-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;               /* Places behind text structures */
+    filter: brightness(0.8);  /* Replicates linear-gradient dark layer color overlay */
+    pointer-events: none;     /* Allows touch events and text selection to bypass smoothly */
+}
+
+/* --- Block Level Internal Structures --- */
+.content-block {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;               /* Pulls content completely over background image layer */
+}
+
+.split-content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 2;               /* Pulls content completely over background image layer */
+}
+
+.top-row-flex {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom-full-width-text {
+    width: 100%;
+    color: #f5f0e6;
+    line-height: 1.6;
+}
+
+.text-side {
+    flex: 1;
+    color: #f5f0e6;
+    line-height: 1.6;
+}
+
+.text-side h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.text-side h1 .subtitle {
+    font-size: 1.5rem;
+    color: #f7b500;
+}
+
+.text-side h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #990000;
+    padding-bottom: 5px;
+}
+
+.text-side p {
+    margin-bottom: 15px;
+}
+
+/* --- Image Boxes & Containers --- */
+.image-side {
+    flex: 0 0 350px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-placeholder {
+    background-color: #110e0a; 
+    border: 3px solid #f7b500;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+    object-fit: cover;
+}
+
+.box-shape {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+}
+
+/* --- Triple Circle Collage Layout Styling --- */
+.triple-bubble-container {
+    position: relative;
+    width: 350px;
+    height: 320px;
+}
+
+.bubble-img {
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Large Main Right Circle */
+.bubble-img.large.main-center {
+    width: 210px;
+    height: 210px;
+    top: 45px;
+    right: 15px;
+    z-index: 2;
+}
+
+/* Medium Circle overlapping behind/below */
+.bubble-img.medium.bottom-center {
+    width: 130px;
+    height: 130px;
+    bottom: 15px;
+    left: 100px;
+    z-index: 3;
+}
+
+/* Small Upper Circle brought in closely to cluster */
+.bubble-img.small.top-left {
+    width: 110px;
+    height: 110px;
+    top: 30px;
+    left: 75px; 
+    z-index: 1;
+}
+
+/* --- Interactive Checklist Section --- */
+.format-checklist-padding {
+    padding-bottom: 60px;
+}
+
+.checklist-section {
+    background-color: rgba(17, 14, 10, 0.9);
+    padding: 35px;
+    border-radius: 16px;
+    border-left: 6px solid #990000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 2;               /* Keeps interactive controls running fine over bg layers */
+}
+
+.checklist-section h2 {
+    color: #f7b500;
+    margin-bottom: 10px;
+}
+
+.checklist-intro {
+    margin-bottom: 25px;
+    font-style: italic;
+    color: #d1c7bd;
+}
+
+.checklist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.table-header, .checklist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #524737;
+}
+
+.table-header {
+    font-weight: bold;
+    color: #ffffff;
+    border-bottom: 2px solid #f7b500;
+}
+
+.status-labels {
+    display: flex;
+    gap: 45px;
+    margin-right: 15px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 60px;
+    margin-right: 22px;
+}
+
+.radio-group input[type="radio"] {
+    transform: scale(1.35);
+    cursor: pointer;
+    accent-color: #990000;
+}
+
+/* --- Responsive Layout Breakpoint --- */
+@media (max-width: 768px) {
+    .content-block, .top-row-flex, .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-bar-logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .image-side, .triple-bubble-container {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .text-side h2 {
+        display: inline-block;
+    }
+}
